@@ -1,6 +1,13 @@
 {
+  "_comment": "Tutorial2 in resource folder add assets folder in it add tutorialmod folder (same as MOD_ID)",
+  "_comment": "Tutorial2 in it add lang, models, textures folder. in models amd textures folder add item folder",
+  "_comment": "Tutorial2 in lang add en_us.json file. the file name must be like this",
+
+
+  "_comment": "Tutorial2 2 line bellow. item and sapphire is from ModItems class, tutorialmod is MOD_ID ",
   "item.tutorialmod.sapphire": "Sapphire",
   "item.tutorialmod.raw_sapphire": "Raw Sapphire",
 
+  "_comment": "Tutorial2 this is for naming custom tab",
   "creativetab.tutorial_tab": "Sapphire Tutorial Tab"
 }

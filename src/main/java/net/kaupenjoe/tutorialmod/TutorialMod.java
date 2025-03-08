@@ -1,4 +1,5 @@
 //this will change folder structure in java folder. hover>more actions>move to package.
+//Tutorial1 change the package name com.example.examplemod to net.kaupenjoe.tutorialmod.
 package net.kaupenjoe.tutorialmod;
 
 import com.mojang.logging.LogUtils;
@@ -20,9 +21,13 @@ import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(TutorialMod.MOD_ID)
+// Tutorial1: change the class name ExampleMod to TutorialMod.
+// Tutorial1: use shift+f6 to replace text on all file.
 public class TutorialMod
 {
     // Define mod id in a common place for everything to reference. changed MODID TO MOD_ID AND STRING TO "tutorialmod". shift+f6 to use replace.
+    // Tutorial1: change MOD.ID to MOD_ID, change "examplemod" to "tutorialmod".
+    // Tutorial1: public static final why?
     public static final String MOD_ID = "tutorialmod";
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
@@ -31,8 +36,10 @@ public class TutorialMod
     {
         IEventBus modEventBus = context.getModEventBus();
 
+        // Tutorial2 add 1 line bellow. register the ModCreativeModTabs to the modEventBus.
         ModCreativeModTabs.register(modEventBus);
 
+        // Tutorial2 add 1 line bellow this. basically to make sure ModItems is properly registered.
         ModItems.register(modEventBus);
 
         // Register the commonSetup method for modloading
@@ -42,6 +49,8 @@ public class TutorialMod
         MinecraftForge.EVENT_BUS.register(this);
 
         // Register the item to a creative tab
+
+        // Tutorial2 1 line bellow. THIS IS SUPER IMPORTANT. without this addCreative will not work.
         modEventBus.addListener(this::addCreative);
 
         // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
@@ -54,8 +63,11 @@ public class TutorialMod
     }
 
     // Add the example block item to the building blocks tab
+
+    // Tutorial2 addCreative method is for adding mod item to vanilla minecraft tab.
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
+        // Tutorial2 add 3 line bellow. add mod item to INGREDIENTS tab in creative.
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.SAPPHIRE);
             event.accept(ModItems.RAW_SAPPHIRE);

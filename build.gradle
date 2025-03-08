@@ -3,6 +3,7 @@ plugins {
     id 'idea'
     id 'maven-publish'
     id 'net.minecraftforge.gradle' version '[6.0,6.2)'
+    // Tutorial1 add line 7. to enable parchment. see https://parchmentmc.org/docs/getting-started
     id 'org.parchmentmc.librarian.forgegradle' version '1.+'
 }
 

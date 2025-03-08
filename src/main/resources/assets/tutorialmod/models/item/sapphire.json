@@ -1,5 +1,11 @@
 {
+  "_comment": "Tutorial2 the name sapphire in sapphire.json must match sapphire in ModItems class ITEMS.register",
+
+  "_comment": "Tutorial2 item/generated means item that generated in your character hand",
   "parent": "item/generated",
+
+  "_comment":"Tutorial2 DO NOT FORGET TO ADD sapphire.png TO THE textures/item folder bellow",
+  "_comment":"Tutorial2 2 line bellow mean the directory for sapphire.png textures",
   "textures": {
     "layer0": "tutorialmod:item/sapphire"
   }

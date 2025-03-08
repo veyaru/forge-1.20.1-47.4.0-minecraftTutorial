@@ -5,6 +5,7 @@ pluginManagement {
             name = 'MinecraftForge'
             url = 'https://maven.minecraftforge.net/'
         }
+        // Tutorial1 add line 9. to enable parchment. see https://parchmentmc.org/docs/getting-started
         maven { url = 'https://maven.parchmentmc.org' } // Add this line
     }
 }
